@@ -1,0 +1,259 @@
+/* ======== General Reset ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* ======== Navbar ======== */
+  .navbar {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #ffcc00;
+  }
+  
+  /* ======== Hero Section (Home Page) ======== */
+  .hero {
+    background: url('school.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #004080; /* fallback color if image not found */
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 8px;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: #ffcc00;
+    color: #004080;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ffdb4d;
+  }
+  
+  /* ======== About Section ======== */
+  .about-section {
+    width: 80%;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    line-height: 1.6;
+  }
+  
+  .about-section h2 {
+    color: #004080;
+    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+  
+  .about-section p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  /* ======== Footer ======== */
+  footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+  }
+/* ======== Updates Section ======== */
+.updates-section {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .updates-section h2 {
+    color: #004080;
+    margin-bottom: 20px;
+  }
+  
+  .update-card {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #004080;
+    border-radius: 5px;
+  }
+  
+  .update-card h3 {
+    color: #004080;
+    margin-bottom: 10px;
+  }
+  
+  .update-card p {
+    margin-bottom: 8px;
+  }
+  
+  .update-card small {
+    color: #777;
+  }
+  
+  /* ======== Forms (Admin Login, Add Update) ======== */
+  .login-box, .form-container {
+    width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .login-box h2, .form-container h2 {
+    color: #004080;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login-box input, .form-container input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0055cc;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+/* ======== Login Page ======== */
+.login-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .login-form {
+    display: inline-block;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .login-form input {
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-form button {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background: #0059b3;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  /* ======== Student Dashboard ======== */
+  .student-section {
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .student-section h2 {
+    color: #004080;
+    margin-bottom: 15px;
+  }
+      
