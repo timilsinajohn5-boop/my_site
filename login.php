@@ -8,12 +8,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM students WHERE username='$username' AND password='$password'";
-    $result = $conn->query($sql);
+    // Check admin table first
+    $sql_admin = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+    $result_admin = $conn->query($sql_admin);
 
-    if ($result->num_rows > 0) {
+    if ($result_admin->num_rows > 0) {
         $_SESSION['username'] = $username;
-        header("Location: students.php");
+        $_SESSION['role'] = 'admin';
+        header("Location: admin/manage_students.php"); // redirect admin
+        exit();
+    }
+
+    // Check student table
+    $sql_student = "SELECT * FROM students WHERE username='$username' AND password='$password'";
+    $result_student = $conn->query($sql_student);
+
+    if ($result_student->num_rows > 0) {
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = 'student';
+        header("Location: students.php"); // redirect student
         exit();
     } else {
         $message = "Invalid username or password!";
